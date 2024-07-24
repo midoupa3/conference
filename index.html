@@ -26,11 +26,27 @@
             font-size: 2em;
         }
 
+        header p.date {
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        header p.atelier {
+            margin: 10px 0 0;
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #FFD700; /* Couleur jaune */
+        }
+
         nav {
             background-color: #005F73;
             color: white;
             display: flex;
             justify-content: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         nav a {
@@ -56,6 +72,23 @@
 
         .container h2 {
             color: #005F73;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0;
+            gap: 20px;
+        }
+
+        .image-container img {
+            width: 100%;
+            max-width: 500px;
+            height: 300px; /* Hauteur fixe pour les images */
+            object-fit: cover; /* Recadre les images pour remplir l'espace tout en conservant les proportions */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         .schedule {
@@ -124,7 +157,8 @@
 <body>
     <header>
         <h1>Conférence Nationale sur l’Energie Verte</h1>
-        <p>24 Juillet 2024</p>
+        <p class="date">24 Juillet 2024</p>
+        <p class="atelier">Atelier CAP - USTHB: Par Houssem Eddine SAYAH de la faculté GMGP</p>
     </header>
     <nav>
         <a href="#accueil">Accueil</a>
@@ -138,17 +172,22 @@
         <section id="accueil">
             <h2>Bienvenue à la Conférence Nationale sur l’Energie Verte</h2>
             <p>
-                La direction générale de la recherche scientifique et du développement technologique (DGRSDT) et le centre de recherche en technologie des semi-conducteurs pour l’énergie organisent la 1er Conference Nationnale sur l’Energie Verte.
+                La direction générale de la recherche scientifique et du développement technologique (DGRSDT) et le Laboratoire de Rationalisation de l’utilisation de l’Eau et de l’Energie organisent la 1er Conference Nationnale sur l’Energie Verte
             </p>
         </section>
+
+        <div class="image-container">
+            <img src="photo1.jpg" alt="Plaques photovoltaïques">
+            <img src="photo2.webp" alt="Éoliennes">
+        </div>
 
         <section id="programme" class="schedule">
             <h2>Programme</h2>
             <h3>Conférences</h3>
             <ul>
                 <li><strong>16h30-16h35</strong> : Introduction ➖ Mr le Ministre des Energies et des Mines</li>
-                <li><strong>16h35-17h00</strong> : Stockage d’énergie thermique ➖ Pr Mahamed Belmadani Joseph FGMGP - USTHB</li>
-                <li><strong>17h00-17h25</strong> : Les différentes solutions de stockage d’électricité ➖ Pr Sadek Bouguettaya, FGElect - USTHB</li>
+                <li><strong>16h35-17h00</strong> : Stockage d’énergie thermique ➖ Pr Mahamed Belmadani FGMGP - USTHB</li>
+                <li><strong>17h00-17h25</strong> : Les différentes solutions de stockage d’électricité ➖ Pr Z. GACI , FGElect - USTHB</li>
                 <li><strong>17h25-17h50</strong> : Un tout nouveau système de stockage de l’hydrogène vert ➖ Pr A. Belgacem FGMGP – USTHB</li>
                 <li><strong>17h50-18h15</strong> : Un nouveau système de climatisation à l’ammoniac ➖ H. SAYAH FGMGP – USTHB</li>
                 <li><strong>18h15-18h40</strong> : Système de stockage de l’électricité photovoltaïque à base d’hydrogène ➖ Pr A. MOUMEN – FGMGP - USTHB</li>
@@ -163,8 +202,8 @@
                 Nous avons le plaisir d'accueillir des experts renommés dans le domaine de l'énergie verte. Venez découvrir leurs présentations et participer aux discussions.
             </p>
             <ul>
-                <li>Pr Mahamed Belmadani Joseph FGMGP - USTHB</li>
-                <li>Pr Sadek Bouguettaya, FGElect - USTHB</li>
+                <li>Pr Mahamed Belmadani FGMGP - USTHB</li>
+                <li>Pr Z. GACI, FGElect - USTHB</li>
                 <li>Pr A. Belgacem FGMGP – USTHB</li>
                 <li>H. SAYAH FGMGP – USTHB</li>
                 <li>Pr A. MOUMEN – FGMGP - USTHB</li>
@@ -180,7 +219,7 @@
 
         <section id="contact" class="form-container">
             <h2>Contactez-nous</h2>
-            <form action="mailto:email@example.com" method="post" enctype="text/plain">
+            <form action="mailto:houssem_s@yahoo.fr" method="post" enctype="text/plain">
                 <label for="name">Nom :</label>
                 <input type="text" id="name" name="name" required>
 
@@ -201,7 +240,7 @@
             Visitez le site de l'<a href="https://www.usthb.dz/" target="_blank">USTHB</a> pour plus d'informations.
         </p>
         <p>
-            Contact : <a href="mailto:contact@usthb.dz">contact@usthb.dz</a>
+            Contact : <a href="mailto:houssem_s@yahoo.fr">houssem_s@yahoo.fr</a>
         </p>
     </footer>
 </body>
